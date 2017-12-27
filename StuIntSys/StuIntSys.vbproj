@@ -1,0 +1,575 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7340F19-C4A3-4B5C-A91D-3D381B978C9A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>StuIntSys.My.MyApplication</StartupObject>
+    <RootNamespace>StuIntSys</RootNamespace>
+    <AssemblyName>StuIntSys</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>StuIntSys.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>StuIntSys.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_qMT_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Work\Projects\BSD\bin\Debug\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.Designer.vb">
+      <DependentUpon>about.vb</DependentUpon>
+    </Compile>
+    <Compile Include="about.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="DataSetsample.Designer.vb">
+      <DependentUpon>DataSetsample.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="DataSetsample.vb">
+      <DependentUpon>DataSetsample.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmfacmanage.Designer.vb">
+      <DependentUpon>frmfacmanage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmfacmanage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGrading.designer.vb">
+      <DependentUpon>frmGrading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmGrading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmanage.Designer.vb">
+      <DependentUpon>frmmanage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmmanage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearch.Designer.vb">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstructvb.Designer.vb">
+      <DependentUpon>frmstructvb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmstructvb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.designer.vb">
+      <DependentUpon>frmUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help.Designer.vb">
+      <DependentUpon>help.vb</DependentUpon>
+    </Compile>
+    <Compile Include="help.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageuservb.Designer.vb">
+      <DependentUpon>manageuservb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="manageuservb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="pay.Designer.vb">
+      <DependentUpon>pay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salary.Designer.vb">
+      <DependentUpon>salary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="salary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchf.Designer.vb">
+      <DependentUpon>searchf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchf.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="searchfac.Designer.vb">
+      <DependentUpon>searchfac.vb</DependentUpon>
+    </Compile>
+    <Compile Include="searchfac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sisDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet62.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet62.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="sisDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sisDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="viewgrade.Designer.vb">
+      <DependentUpon>viewgrade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="viewgrade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcomeusr.Designer.vb">
+      <DependentUpon>Welcomeusr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Welcomeusr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="about.resx">
+      <DependentUpon>about.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmfacmanage.resx">
+      <DependentUpon>frmfacmanage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGrading.resx">
+      <DependentUpon>frmGrading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmanage.resx">
+      <DependentUpon>frmmanage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearch.resx">
+      <DependentUpon>frmSearch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstructvb.resx">
+      <DependentUpon>frmstructvb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdate.resx">
+      <DependentUpon>frmUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help.resx">
+      <DependentUpon>help.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="manageuservb.resx">
+      <DependentUpon>manageuservb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pay.resx">
+      <DependentUpon>pay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salary.resx">
+      <DependentUpon>salary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchf.resx">
+      <DependentUpon>searchf.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="searchfac.resx">
+      <DependentUpon>searchfac.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewgrade.resx">
+      <DependentUpon>viewgrade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcomeusr.resx">
+      <DependentUpon>Welcomeusr.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetsample.xsc">
+      <DependentUpon>DataSetsample.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetsample.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetsample.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSetsample.xss">
+      <DependentUpon>DataSetsample.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="sisDataSet.xsc">
+      <DependentUpon>sisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet.xss">
+      <DependentUpon>sisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet1.xsc">
+      <DependentUpon>sisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet1.xss">
+      <DependentUpon>sisDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet2.xsc">
+      <DependentUpon>sisDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet2.xss">
+      <DependentUpon>sisDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet3.xsc">
+      <DependentUpon>sisDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet3.xss">
+      <DependentUpon>sisDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet4.xsc">
+      <DependentUpon>sisDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet4.xss">
+      <DependentUpon>sisDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet5.xsc">
+      <DependentUpon>sisDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet5.xss">
+      <DependentUpon>sisDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet62.xsc">
+      <DependentUpon>sisDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet62.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet62.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet62.xss">
+      <DependentUpon>sisDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet7.xsc">
+      <DependentUpon>sisDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet7.xss">
+      <DependentUpon>sisDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet8.xsc">
+      <DependentUpon>sisDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet8.xss">
+      <DependentUpon>sisDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet9.xsc">
+      <DependentUpon>sisDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="sisDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sisDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sisDataSet9.xss">
+      <DependentUpon>sisDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maxresdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple_white_background_stains_abstract_65537_1920x1080.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Golden-easter-pattern-and-purple-background-vector-04.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13949257-abstract-purple-background-layout-design-illustration-with-parchment-ribbon-stripe-and-dark-black-vi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WDF_2472894.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-login-signin-signup-psd-029.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-windows-secret-background-wallpaper-computers-desktop-97225.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account User Edit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account User Add.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\train2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ex.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\h3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\register2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images~6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user regestration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quotation 256.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record_512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon_crN_icon.ico" />
+    <Content Include="icon_qMT_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
